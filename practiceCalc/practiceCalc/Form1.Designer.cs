@@ -123,6 +123,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "-";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -133,6 +134,7 @@
             this.button3.TabIndex = 8;
             this.button3.Text = "×";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
@@ -143,6 +145,7 @@
             this.button4.TabIndex = 9;
             this.button4.Text = "/";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button1_Click);
             // 
             // button5
             // 
@@ -151,8 +154,9 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(265, 40);
             this.button5.TabIndex = 10;
-            this.button5.Text = "X возвести в степень Y";
+            this.button5.Text = "x^y";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button2_Click);
             // 
             // button6
             // 
@@ -161,8 +165,9 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(265, 40);
             this.button6.TabIndex = 11;
-            this.button6.Text = "Найти остаток X от Y";
+            this.button6.Text = "x%y";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -184,6 +189,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Click += new System.EventHandler(this.button1_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
