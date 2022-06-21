@@ -7,9 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static practiceCalc.TwoArgumentsCalculator;
+using static practiceCalc.ITwoArguments;
 
 namespace practiceCalc
 {
+    
     public partial class Form1 : Form
     {
         public string operation;
@@ -31,6 +34,7 @@ namespace practiceCalc
 
         private void button1_Click(object sender, EventArgs e)
         {
+            mathematicFunction mathFunc = new mathematicFunction();
             Button A = (Button)sender;
             operation = A.Text;
             x = textBox1.Text;
@@ -38,7 +42,21 @@ namespace practiceCalc
             double nx = Convert.ToDouble(x);
             double ny = Convert.ToDouble(y);
             double result = 0;
-            if(operation == "+")
+            // ITwoArgumentsCalculator calculator = TwoArgumentsFactory.CreateCalculator(имяКалькулятора);
+
+            /*
+            switch(A.Text)
+            {
+                case "+":
+                    result = mathFunc.Addition(nx, ny);
+                    break;
+                case "-":
+                    mathFunc.substract(nx, ny);
+                    break;
+            }
+            */
+
+            /*if(operation == "+")
             {
                 result = nx + ny;
             }
@@ -56,12 +74,13 @@ namespace practiceCalc
             }
             if (operation == "x^y")
             {
-                result = Math.Pow(nx,ny);
+                result = Math.Pow(nx, ny);
             }
             if (operation == "x%y")
             {
                 result = nx % ny;
             }
+            */
             textBox3.Text = result.ToString();
         }
 

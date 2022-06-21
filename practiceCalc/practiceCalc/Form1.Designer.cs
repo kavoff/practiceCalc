@@ -49,7 +49,7 @@
             this.textBox1.MaximumSize = new System.Drawing.Size(200, 40);
             this.textBox1.MinimumSize = new System.Drawing.Size(130, 40);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 40);
+            this.textBox1.Size = new System.Drawing.Size(150, 26);
             this.textBox1.TabIndex = 0;
             // 
             // textBox2
@@ -58,7 +58,7 @@
             this.textBox2.Location = new System.Drawing.Point(190, 45);
             this.textBox2.MinimumSize = new System.Drawing.Size(130, 40);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 40);
+            this.textBox2.Size = new System.Drawing.Size(150, 26);
             this.textBox2.TabIndex = 1;
             // 
             // textBox3
@@ -69,7 +69,7 @@
             this.textBox3.MinimumSize = new System.Drawing.Size(130, 40);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(205, 40);
+            this.textBox3.Size = new System.Drawing.Size(205, 26);
             this.textBox3.TabIndex = 2;
             // 
             // label1
@@ -156,7 +156,7 @@
             this.button5.TabIndex = 10;
             this.button5.Text = "x^y";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button2_Click);
+            this.button5.Click += new System.EventHandler(this.button1_Click);
             // 
             // button6
             // 
