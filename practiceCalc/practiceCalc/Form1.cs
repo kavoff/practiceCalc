@@ -17,6 +17,7 @@ namespace practiceCalc
     {
         public string operation;
         public string x, y;
+        public double firstArgument, secondArgument;
         public Form1()
         {
             InitializeComponent();
@@ -34,53 +35,18 @@ namespace practiceCalc
 
         private void button1_Click(object sender, EventArgs e)
         {
-            mathematicFunction mathFunc = new mathematicFunction();
+            // mathematicFunction mathFunc = new mathematicFunction();
             Button A = (Button)sender;
             operation = A.Text;
             x = textBox1.Text;
             y = textBox2.Text;
             double nx = Convert.ToDouble(x);
             double ny = Convert.ToDouble(y);
-            double result = 0;
-            // ITwoArgumentsCalculator calculator = TwoArgumentsFactory.CreateCalculator(имяКалькулятора);
-
-            /*
-            switch(A.Text)
-            {
-                case "+":
-                    result = mathFunc.Addition(nx, ny);
-                    break;
-                case "-":
-                    mathFunc.substract(nx, ny);
-                    break;
-            }
-            */
-
-            /*if(operation == "+")
-            {
-                result = nx + ny;
-            }
-            if (operation == "-")
-            {
-                result = nx - ny;
-            }
-            if (operation == "×")
-            {
-                result = nx * ny;
-            }
-            if (operation == "/")
-            {
-                result = nx / ny;
-            }
-            if (operation == "x^y")
-            {
-                result = Math.Pow(nx, ny);
-            }
-            if (operation == "x%y")
-            {
-                result = nx % ny;
-            }
-            */
+            
+            // должен быть вызов общего класса "фабрики" и запись результата
+            ITwoArguments calculator = CreateCalculator(operation);
+            double result = calculator;
+            
             textBox3.Text = result.ToString();
         }
 

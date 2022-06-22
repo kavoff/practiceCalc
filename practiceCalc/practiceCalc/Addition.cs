@@ -3,16 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-// using static practiceCalc.ITwoArguments;
+// Операция сложения двух чисел
 
 namespace practiceCalc
 {
     public partial class AdditionCalculator : ITwoArguments
     {
-        double ITwoArguments.Calculate(double x, double y)
+        public static double firstArgument, secondArgument;
+        public double Calculate(double firstArgument, double secondArgument)
         {
-            return x + y;
+            return (double)(firstArgument + secondArgument);
         }
-        
+        /*
+        double ITwoArguments.Calculate(double firstArgument, double secondArgument)
+        {
+            double result = 0;
+            result = firstArgument + secondArgument;
+            return result;
+        }
+        */
     }
 }

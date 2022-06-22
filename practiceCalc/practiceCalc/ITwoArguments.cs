@@ -8,6 +8,10 @@ namespace practiceCalc
 {
     public interface ITwoArguments
     {
-        double Calculate(double argumentOne, double argumentTwo);
+        double Calculate(double firstArgument, double secondArgument);
+
+        
     }
+
+
 }

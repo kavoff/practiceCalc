@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+// Операция умножения двух чисел
 
 namespace practiceCalc
 {
     public partial class MultiplyCalculator : ITwoArguments
     {
-        double ITwoArguments.Calculate(double x, double y)
+        public static double firstArgument, secondArgument;
+        public double Calculate(double firstArgument, double secondArgument)
         {
-            return x * y;
+            return firstArgument * secondArgument;
         }
 
     }
