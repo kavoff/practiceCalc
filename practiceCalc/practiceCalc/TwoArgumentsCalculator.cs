@@ -17,25 +17,19 @@ namespace practiceCalc
             switch (calculatorName)
             {
                 case "+":
-                    AdditionCalculator additionCalculator = new AdditionCalculator();
-                    return additionCalculator.Calculate(firstArgument, secondArgument);
+                    return new AdditionCalculator().Calculate(firstArgument, secondArgument);
                 case "-":
-                    SubstractCalculator substractCalculator = new SubstractCalculator();
-                    return substractCalculator.Calculate(firstArgument, secondArgument);
+                    return new SubstractCalculator().Calculate(firstArgument, secondArgument);
                 case "×":
-                    MultiplyCalculator multiplyCalculator = new MultiplyCalculator();
-                    return multiplyCalculator.Calculate(firstArgument, secondArgument);
+                    return new MultiplyCalculator().Calculate(firstArgument, secondArgument);
                 case "/":
-                    DivisionCalculator divisionCalculator = new DivisionCalculator();
-                    return divisionCalculator.Calculate(firstArgument, secondArgument);
+                    return new DivisionCalculator().Calculate(firstArgument, secondArgument);
                 case "x^y":
-                    ExponentationCalculator exponentationCalculator = new ExponentationCalculator();
-                    return exponentationCalculator.Calculate(firstArgument, secondArgument);
+                    return new ExponentationCalculator().Calculate(firstArgument, secondArgument);
                 case "x%y":
-                    RemainderCalculator remainderCalculator = new RemainderCalculator();
-                    return remainderCalculator.Calculate(firstArgument, secondArgument);
+                    return new RemainderCalculator().Calculate(firstArgument, secondArgument);
                 default:
-                    throw new Exception("Неизвестная операция");
+                    throw new Exception("Unknown operation");
             }
         }
     }

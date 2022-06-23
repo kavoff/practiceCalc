@@ -44,8 +44,8 @@ namespace practiceCalc
             secondArgument = Convert.ToDouble(y);
 
             // Вызов фабрики и запись результата вычислений в переменную
-            double calc = CreateCalculator(operation);
-            double result = calc;
+            double result = CreateCalculator(operation);
+            
             if (operation == "x^y")
             {
                 if (firstArgument < 0)

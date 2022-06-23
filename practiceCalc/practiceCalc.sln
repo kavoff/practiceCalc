@@ -5,7 +5,9 @@ VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "practiceCalc", "practiceCalc\practiceCalc.csproj", "{C2D09A38-A601-4104-8AC9-6CB0EFA3ABFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "practiceCalc.Tests", "practiceCalc.Tests\practiceCalc.Tests.csproj", "{0ACE19B0-E0AB-4AC7-A6D4-1C795B388C3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "practiceCalc.Tests", "practiceCalc.Tests\practiceCalc.Tests.csproj", "{0ACE19B0-E0AB-4AC7-A6D4-1C795B388C3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "practiceCalcWeb", "practiceCalcWeb\practiceCalcWeb.csproj", "{F1A37E51-520E-48DD-AB94-6DFC053C0BF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{0ACE19B0-E0AB-4AC7-A6D4-1C795B388C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0ACE19B0-E0AB-4AC7-A6D4-1C795B388C3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0ACE19B0-E0AB-4AC7-A6D4-1C795B388C3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1A37E51-520E-48DD-AB94-6DFC053C0BF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1A37E51-520E-48DD-AB94-6DFC053C0BF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1A37E51-520E-48DD-AB94-6DFC053C0BF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1A37E51-520E-48DD-AB94-6DFC053C0BF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
