@@ -48,9 +48,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Addition.cs" />
+    <Compile Include="Remainder.cs" />
     <Compile Include="Division.cs" />
+    <Compile Include="Exponentation.cs" />
     <Compile Include="ITwoArguments.cs" />
-    <Compile Include="mathematicFunction.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

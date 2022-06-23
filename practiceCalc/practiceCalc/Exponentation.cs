@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-// Операция вычитания двух чисел
 
 namespace practiceCalc
 {
-    public class SubstractCalculator : ITwoArguments
+    public partial class ExponentationCalculator : ITwoArguments
     {
         public double Calculate(double firstArgument, double secondArgument)
         {
-            return firstArgument - secondArgument;
+            return Math.Pow(firstArgument, secondArgument);
         }
     }
 }

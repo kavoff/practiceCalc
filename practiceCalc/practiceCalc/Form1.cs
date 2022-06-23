@@ -17,7 +17,6 @@ namespace practiceCalc
     {
         public string operation;
         public string x, y;
-        public double firstArgument, secondArgument;
         public Form1()
         {
             InitializeComponent();
@@ -35,24 +34,21 @@ namespace practiceCalc
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // mathematicFunction mathFunc = new mathematicFunction();
+            // Обработчик нажатия на кнопку, конвертирование кнопки в текст.
             Button A = (Button)sender;
             operation = A.Text;
             x = textBox1.Text;
             y = textBox2.Text;
-            double nx = Convert.ToDouble(x);
-            double ny = Convert.ToDouble(y);
-            
-            // должен быть вызов общего класса "фабрики" и запись результата
-            ITwoArguments calculator = CreateCalculator(operation);
-            double result = calculator;
-            
-            textBox3.Text = result.ToString();
-        }
+            // Конвертирование текста в числовые значения
+            firstArgument = Convert.ToDouble(x);
+            secondArgument = Convert.ToDouble(y);
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
+            // Вызов фабрики и запись результата вычислений в переменную
+            double calc = CreateCalculator(operation);
+            double result = calc;
+
+            // Вывод результата в виде строки
+            textBox3.Text = result.ToString();
         }
     }
 }
