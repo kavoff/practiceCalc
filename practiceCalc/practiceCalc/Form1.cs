@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static practiceCalc.TwoArgumentsCalculator;
-using static practiceCalc.ITwoArguments;
+using static practiceCalc.ITwoArgumentsCalculator;
 
 namespace practiceCalc
 {
@@ -46,7 +46,13 @@ namespace practiceCalc
             // Вызов фабрики и запись результата вычислений в переменную
             double calc = CreateCalculator(operation);
             double result = calc;
-
+            if (operation == "x^y")
+            {
+                if (firstArgument < 0)
+                {
+                    textBox3.Text = "X must be > 0";
+                }
+            }
             // Вывод результата в виде строки
             textBox3.Text = result.ToString();
         }

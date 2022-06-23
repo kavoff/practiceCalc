@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace practiceCalc
 {
-    public class SubstractCalculator : ITwoArguments
+    public class SubstractCalculator : ITwoArgumentsCalculator
     {
         public double Calculate(double firstArgument, double secondArgument)
         {

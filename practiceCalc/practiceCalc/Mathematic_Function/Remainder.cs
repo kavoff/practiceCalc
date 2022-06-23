@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace practiceCalc
 {
-    public class RemainderCalculator : ITwoArguments
+    public class RemainderCalculator : ITwoArgumentsCalculator
     {
         public double Calculate(double firstArgument, double secondArgument)
         {
