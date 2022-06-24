@@ -109,5 +109,18 @@ namespace practiceCalc.Tests
         }
     }
 
-    
+    public class MaxTest
+    {
+        [TestCase(816, 815, 816)]
+        [TestCase(27, 3, 27)]
+        [TestCase(123, 124, 124)]
+        public void CalculatorTest(double firstArgument, double secondArgument, double expectedResult)
+        {
+            // actual result
+            MaxCalculator max = new MaxCalculator();
+            double actualResult = max.Calculate(firstArgument, secondArgument);
+            ;
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+    }
 }
