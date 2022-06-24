@@ -48,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Mathematic_Function\Addition.cs" />
+    <Compile Include="Mathematic_Function\IntegerDivision.cs" />
+    <Compile Include="Mathematic_Function\Logarithm.cs" />
     <Compile Include="Mathematic_Function\Remainder.cs" />
     <Compile Include="Mathematic_Function\Division.cs" />
     <Compile Include="Mathematic_Function\Exponentation.cs" />
