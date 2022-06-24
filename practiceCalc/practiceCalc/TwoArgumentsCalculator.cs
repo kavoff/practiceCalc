@@ -32,6 +32,10 @@ namespace practiceCalc
                     return new ExponentationCalculator().Calculate(firstArgument, secondArgument);
                 case "x%y":
                    return new RemainderCalculator().Calculate(firstArgument, secondArgument);
+                case "logx(y)":
+                    return new RemainderCalculator().Calculate(firstArgument, secondArgument);
+                case "max(x,y)":
+                    return new RemainderCalculator().Calculate(firstArgument, secondArgument);
                 default:
                     throw new Exception("Unknown operation");
             }
