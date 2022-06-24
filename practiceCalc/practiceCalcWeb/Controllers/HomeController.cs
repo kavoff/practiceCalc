@@ -25,7 +25,9 @@ namespace practiceCalcWeb.Controllers
                 new SelectListItem() { Value = "-", Text ="Вычесть" },
                 new SelectListItem() { Value = "/", Text ="Поделить" },
                 new SelectListItem() { Value = "x^y", Text ="Возвести X в степень Y" },
-                new SelectListItem() { Value = "x%y", Text ="Найти остаток" }
+                new SelectListItem() { Value = "x%y", Text ="Найти остаток" },
+                new SelectListItem() { Value = "logx(y)", Text ="Найти логарифм Y по основанию X" },
+                new SelectListItem() { Value = "max(x,y)", Text ="Найти максимальное значение между X и Y" }
             };
             return View();
         }
@@ -65,6 +67,14 @@ namespace practiceCalcWeb.Controllers
                     RemainderCalculator remainder = new RemainderCalculator();
                     result = remainder.Calculate(firstArgument, secondArgument);
                     break;
+                case "logx(y)":
+                    LogarithmCalculator logarithm = new LogarithmCalculator();
+                    result = logarithm.Calculate(firstArgument, secondArgument);
+                    break;
+                case "max(x,y)":
+                    MaxCakukator max = new MaxCakukator();
+                    result = max.Calculate(firstArgument, secondArgument);
+                    break;
             }
             
             ViewBag.Result = result;
@@ -76,7 +86,9 @@ namespace practiceCalcWeb.Controllers
                 new SelectListItem() { Value = "-", Text ="Вычесть" },
                 new SelectListItem() { Value = "/", Text ="Поделить" },
                 new SelectListItem() { Value = "x^y", Text ="Возвести X в степень Y" },
-                new SelectListItem() { Value = "x%y", Text ="Найти остаток" }
+                new SelectListItem() { Value = "x%y", Text ="Найти остаток" },
+                new SelectListItem() { Value = "logx(y)", Text ="Найти логарифм Y по основанию X" },
+                new SelectListItem() { Value = "max(x,y)", Text ="Найти максимальное значение между X и Y" }
             };
             return View();
         }

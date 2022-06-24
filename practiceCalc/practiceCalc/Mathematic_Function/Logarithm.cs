@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace practiceCalc
 {
-    public class Logarithm : ITwoArgumentsCalculator
+    public class LogarithmCalculator : ITwoArgumentsCalculator
     {
         public double Calculate(double firstArgument, double secondArgument)
         {
