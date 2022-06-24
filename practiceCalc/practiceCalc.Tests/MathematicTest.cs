@@ -14,7 +14,6 @@ namespace practiceCalc.Tests
             // actual result
             AdditionCalculator addition = new AdditionCalculator();
             double actualResult = addition.Calculate(firstArgument, secondArgument);
-            ;
             Assert.AreEqual(expectedResult, actualResult);
         }
     }
@@ -29,7 +28,6 @@ namespace practiceCalc.Tests
             // actual result
             SubstractCalculator substract = new SubstractCalculator();
             double actualResult = substract.Calculate(firstArgument, secondArgument);
-            ;
             Assert.AreEqual(expectedResult, actualResult);
         }
     }
@@ -44,7 +42,6 @@ namespace practiceCalc.Tests
             // actual result
             MultiplyCalculator multiply = new MultiplyCalculator();
             double actualResult = multiply.Calculate(firstArgument, secondArgument);
-            ;
             Assert.AreEqual(expectedResult, actualResult);
         }
     }
@@ -59,7 +56,6 @@ namespace practiceCalc.Tests
             // actual result
             DivisionCalculator division = new DivisionCalculator();
             double actualResult = division.Calculate(firstArgument, secondArgument);
-            ;
             Assert.AreEqual(expectedResult, actualResult);
         }
     }
@@ -74,7 +70,6 @@ namespace practiceCalc.Tests
             // actual result
             ExponentationCalculator exponentation = new ExponentationCalculator();
             double actualResult = exponentation.Calculate(firstArgument, secondArgument);
-            ;
             Assert.AreEqual(expectedResult, actualResult);
         }
     }
@@ -89,22 +84,19 @@ namespace practiceCalc.Tests
             // actual result
             RemainderCalculator remainder = new RemainderCalculator();
             double actualResult = remainder.Calculate(firstArgument, secondArgument);
-            ;
             Assert.AreEqual(expectedResult, actualResult);
         }
     }
 
     public class LogarithmTest
     {
-        [TestCase(4, 2, 2)]
-        [TestCase(27, 3, 3)]
-        [TestCase(16, 2, 4)]
+        [TestCase(4, 2, 0.5)]
+        [TestCase(2, 1, 0)]
         public void CalculatorTest(double firstArgument, double secondArgument, double expectedResult)
         {
             // actual result
             LogarithmCalculator logarithm = new LogarithmCalculator();
             double actualResult = logarithm.Calculate(firstArgument, secondArgument);
-            ;
             Assert.AreEqual(expectedResult, actualResult);
         }
     }
@@ -119,7 +111,6 @@ namespace practiceCalc.Tests
             // actual result
             MaxCalculator max = new MaxCalculator();
             double actualResult = max.Calculate(firstArgument, secondArgument);
-            ;
             Assert.AreEqual(expectedResult, actualResult);
         }
     }

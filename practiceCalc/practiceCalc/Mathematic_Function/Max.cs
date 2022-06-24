@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace practiceCalc
 {
-    public class MaxCakukator : ITwoArgumentsCalculator
+    public class MaxCalculator : ITwoArgumentsCalculator
     {
         public double Calculate(double firstArgument, double secondArgument)
         {
-            return Math.Log(secondArgument, firstArgument);
+            if (firstArgument >= secondArgument)
+            {
+                return firstArgument;
+            }
+            return secondArgument;
+            
+            //return Math.Log(secondArgument, firstArgument);
         }
 
     }

@@ -72,7 +72,7 @@ namespace practiceCalcWeb.Controllers
                     result = logarithm.Calculate(firstArgument, secondArgument);
                     break;
                 case "max(x,y)":
-                    MaxCakukator max = new MaxCakukator();
+                    MaxCalculator max = new MaxCalculator();
                     result = max.Calculate(firstArgument, secondArgument);
                     break;
             }

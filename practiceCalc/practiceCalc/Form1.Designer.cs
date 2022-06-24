@@ -189,7 +189,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(265, 40);
             this.button8.TabIndex = 13;
-            this.button8.Text = "x//y";
+            this.button8.Text = "max(x,y)";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button1_Click);
             // 
