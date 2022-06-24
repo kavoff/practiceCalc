@@ -13,11 +13,6 @@ namespace practiceCalc
     {
         public double Calculate(double firstArgument, double secondArgument)
         {
-            if (secondArgument == 0)
-            {
-                throw new DivideByZeroException("Деление на 0");
-            }
-
             return firstArgument / secondArgument;
         }
 
