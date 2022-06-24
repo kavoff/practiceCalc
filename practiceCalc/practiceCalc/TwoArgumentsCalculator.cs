@@ -33,9 +33,9 @@ namespace practiceCalc
                 case "x%y":
                    return new RemainderCalculator().Calculate(firstArgument, secondArgument);
                 case "logx(y)":
-                    return new RemainderCalculator().Calculate(firstArgument, secondArgument);
+                    return new LogarithmCalculator().Calculate(firstArgument, secondArgument);
                 case "max(x,y)":
-                    return new RemainderCalculator().Calculate(firstArgument, secondArgument);
+                    return new MaxCakukator().Calculate(firstArgument, secondArgument);
                 default:
                     throw new Exception("Unknown operation");
             }
