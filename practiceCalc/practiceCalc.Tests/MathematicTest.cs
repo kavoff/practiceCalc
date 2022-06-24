@@ -33,4 +33,64 @@ namespace practiceCalc.Tests
             Assert.AreEqual(expectedResult, actualResult);
         }
     }
+
+    public class MultiplyTest
+    {
+        [TestCase(0, 0, 0)]
+        [TestCase(5, 2, 10)]
+        [TestCase(-2, 3, -6)]
+        public void CalculatorTest(double firstArgument, double secondArgument, double expectedResult)
+        {
+            // actual result
+            MultiplyCalculator multiply = new MultiplyCalculator();
+            double actualResult = multiply.Calculate(firstArgument, secondArgument);
+            ;
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+    }
+
+    public class DivisionTest
+    {
+        [TestCase(2, 1, 2)]
+        [TestCase(15, -1, -15)]
+        [TestCase(-6, -3, 2)]
+        public void CalculatorTest(double firstArgument, double secondArgument, double expectedResult)
+        {
+            // actual result
+            DivisionCalculator division = new DivisionCalculator();
+            double actualResult = division.Calculate(firstArgument, secondArgument);
+            ;
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+    }
+
+    public class ExponentationTest
+    {
+        [TestCase(2, 3, 8)]
+        [TestCase(5, 2, 25)]
+        [TestCase(5, -1, 0.2)]
+        public void CalculatorTest(double firstArgument, double secondArgument, double expectedResult)
+        {
+            // actual result
+            ExponentationCalculator exponentation = new ExponentationCalculator();
+            double actualResult = exponentation.Calculate(firstArgument, secondArgument);
+            ;
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+    }
+
+    public class RemainderTest
+    {
+        [TestCase(1, 2, 1)]
+        [TestCase(51, 4, 3)]
+        [TestCase(-6, 4, -2)]
+        public void CalculatorTest(double firstArgument, double secondArgument, double expectedResult)
+        {
+            // actual result
+            RemainderCalculator remainder = new RemainderCalculator();
+            double actualResult = remainder.Calculate(firstArgument, secondArgument);
+            ;
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+    }
 }
