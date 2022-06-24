@@ -64,7 +64,6 @@ namespace practiceCalcWeb.Controllers
                 case "x%y":
                     RemainderCalculator remainder = new RemainderCalculator();
                     result = remainder.Calculate(firstArgument, secondArgument);
-                    ViewBag.Result = result;
                     break;
             }
             

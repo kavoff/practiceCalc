@@ -23,6 +23,10 @@ namespace practiceCalc
                 case "×":
                     return new MultiplyCalculator().Calculate(firstArgument, secondArgument);
                 case "/":
+                    if (secondArgument == 0)
+                    {
+                        throw new DivideByZeroException("Деление на 0");
+                    }
                     return new DivisionCalculator().Calculate(firstArgument, secondArgument);
                 case "x^y":
                     return new ExponentationCalculator().Calculate(firstArgument, secondArgument);
