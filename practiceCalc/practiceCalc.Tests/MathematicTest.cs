@@ -93,4 +93,34 @@ namespace practiceCalc.Tests
             Assert.AreEqual(expectedResult, actualResult);
         }
     }
+
+    public class LogarithmTest
+    {
+        [TestCase(4, 2, 2)]
+        [TestCase(27, 3, 3)]
+        [TestCase(16, 2, 4)]
+        public void CalculatorTest(double firstArgument, double secondArgument, double expectedResult)
+        {
+            // actual result
+            LogarithmCalculator logarithm = new LogarithmCalculator();
+            double actualResult = logarithm.Calculate(firstArgument, secondArgument);
+            ;
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+    }
+
+    public class MaxTest
+    {
+        [TestCase(816, 815, 816)]
+        [TestCase(27, 3, 27)]
+        [TestCase(123, 124, 124)]
+        public void CalculatorTest(double firstArgument, double secondArgument, double expectedResult)
+        {
+            // actual result
+            MaxCalculator max = new MaxCalculator();
+            double actualResult = max.Calculate(firstArgument, secondArgument);
+            ;
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+    }
 }
