@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace practiceCalc
 {
-    public partial class MultiplyCalculator : ITwoArgumentsCalculator
+    public class MultiplyCalculator : ITwoArgumentsCalculator
     {
-        public static double firstArgument, secondArgument;
         public double Calculate(double firstArgument, double secondArgument)
         {
             return firstArgument * secondArgument;

@@ -42,17 +42,21 @@ namespace practiceCalc
             // Конвертирование текста в числовые значения
             firstArgument = Convert.ToDouble(x);
             secondArgument = Convert.ToDouble(y);
+            double result;
+
+            // Исключение деления на ноль. Вывод ошибки.
+            try
+            {
+                CreateCalculator(operation);
+            }
+            catch (DivideByZeroException er)
+            {
+                textBox3.Text = er.Message;
+            }
 
             // Вызов фабрики и запись результата вычислений в переменную
-            double result = CreateCalculator(operation);
+            result = CreateCalculator(operation);
             
-            if (operation == "x^y")
-            {
-                if (firstArgument < 0)
-                {
-                    textBox3.Text = "X must be > 0";
-                }
-            }
             // Вывод результата в виде строки
             textBox3.Text = result.ToString();
         }

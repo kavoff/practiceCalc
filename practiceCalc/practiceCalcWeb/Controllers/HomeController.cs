@@ -4,7 +4,6 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using practiceCalc;
 
-
 namespace practiceCalcWeb.Controllers
 {
 
@@ -17,19 +16,16 @@ namespace practiceCalcWeb.Controllers
             _logger = logger;
         }
 
-        /*public IActionResult Index()
-        {
-            return View();
-        }*/
-
         public ActionResult Index()
         {
             ViewBag.Operation = new SelectListItem[]
             {
-                new SelectListItem() { Value = "×", Text ="×" },
-                new SelectListItem() { Value = "+", Text ="+" },
-                new SelectListItem() { Value = "-", Text ="-" },
-                new SelectListItem() { Value = "/", Text ="/" }
+                new SelectListItem() { Value = "×", Text ="Умножить" },
+                new SelectListItem() { Value = "+", Text ="Сложить" },
+                new SelectListItem() { Value = "-", Text ="Вычесть" },
+                new SelectListItem() { Value = "/", Text ="Поделить" },
+                new SelectListItem() { Value = "x^y", Text ="Возвести X в степень Y" },
+                new SelectListItem() { Value = "x%y", Text ="Найти остаток" }
             };
             return View();
         }
@@ -40,28 +36,49 @@ namespace practiceCalcWeb.Controllers
             double secondArgument,
             string operation)
         {
-            //double calculator = TwoArgumentsCalculator.CreateCalculator(operation);
-            //double result = calculator;
+            double result = 0;
 
-            //double calculator = CreateCalculator(operation);
-            //double result = calculator;
-
-            double result = TwoArgumentsCalculator.CreateCalculator(operation);
-            // double result = calc.Calculate(firstArgument, secondArgument);
+            // switch из "фабрики" напрямую.
+            switch (operation)
+            {
+                case "+":
+                    AdditionCalculator addition = new AdditionCalculator();
+                    result = addition.Calculate(firstArgument, secondArgument);
+                    break;
+                case "-":
+                    SubstractCalculator substract = new SubstractCalculator();
+                    result = substract.Calculate(firstArgument, secondArgument);
+                    break;
+                case "×":
+                    MultiplyCalculator multiply = new MultiplyCalculator();
+                    result = multiply.Calculate(firstArgument, secondArgument);
+                    break;
+                case "/":
+                    DivisionCalculator division = new DivisionCalculator();
+                    result = division.Calculate(firstArgument, secondArgument);
+                    break;
+                case "x^y":
+                    ExponentationCalculator exponentation = new ExponentationCalculator();
+                    result = exponentation.Calculate(firstArgument, secondArgument);
+                    break;
+                case "x%y":
+                    RemainderCalculator remainder = new RemainderCalculator();
+                    result = remainder.Calculate(firstArgument, secondArgument);
+                    ViewBag.Result = result;
+                    break;
+            }
             
-            // double result = new AdditionCalculator().Calculate(firstArgument, secondArgument);
-            
-
             ViewBag.Result = result;
-
+            
             ViewBag.Operation = new SelectListItem[]
             {
-                new SelectListItem() { Value = "×", Text ="×" },
-                new SelectListItem() { Value = "+", Text ="+" },
-                new SelectListItem() { Value = "-", Text ="-" },
-                new SelectListItem() { Value = "/", Text ="/" }
+                new SelectListItem() { Value = "×", Text ="Умножить" },
+                new SelectListItem() { Value = "+", Text ="Сложить" },
+                new SelectListItem() { Value = "-", Text ="Вычесть" },
+                new SelectListItem() { Value = "/", Text ="Поделить" },
+                new SelectListItem() { Value = "x^y", Text ="Возвести X в степень Y" },
+                new SelectListItem() { Value = "x%y", Text ="Найти остаток" }
             };
-            
             return View();
         }
 

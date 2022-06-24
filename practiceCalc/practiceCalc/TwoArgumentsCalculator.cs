@@ -27,7 +27,7 @@ namespace practiceCalc
                 case "x^y":
                     return new ExponentationCalculator().Calculate(firstArgument, secondArgument);
                 case "x%y":
-                    return new RemainderCalculator().Calculate(firstArgument, secondArgument);
+                   return new RemainderCalculator().Calculate(firstArgument, secondArgument);
                 default:
                     throw new Exception("Unknown operation");
             }

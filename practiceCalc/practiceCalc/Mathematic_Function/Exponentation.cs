@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace practiceCalc
 {
-    public partial class ExponentationCalculator : ITwoArgumentsCalculator
+    public class ExponentationCalculator : ITwoArgumentsCalculator
     {
         public double Calculate(double firstArgument, double secondArgument)
         {
