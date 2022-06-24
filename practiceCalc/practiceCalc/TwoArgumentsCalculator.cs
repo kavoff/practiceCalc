@@ -35,7 +35,7 @@ namespace practiceCalc
                 case "logx(y)":
                     return new LogarithmCalculator().Calculate(firstArgument, secondArgument);
                 case "max(x,y)":
-                    return new MaxCakukator().Calculate(firstArgument, secondArgument);
+                    return new MaxCalculator().Calculate(firstArgument, secondArgument);
                 default:
                     throw new Exception("Unknown operation");
             }
